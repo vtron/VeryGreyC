@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Grace Varga's Portfolio</title>
+		<meta name="author" content="Grace Salem Varga">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- CSS -->
+		<link rel = "stylesheet" href = "_css/default.css" />
+		<link rel = "stylesheet" media = "screen" href = "_css/common.css" />
+		<link rel="stylesheet" href="styles.css"/>   
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+		
+		<!-- JS -->
+		<script src = "_lib/jquery-1.4.min.js"></script>
+		<script src = "_lib/jquery.easing-1.3.js"></script>
+		
+		
+	 	 <script type="text/javascript">
+	
+		$(document).ready(function() {
+		
+		   $("#redButton").click(function() { 
+			   $(".red").toggleClass("yellow");
+		   });		
+		});
+
+		$(document).ready(function() {
+		   
+		   $(".ipad_p").hide();
+		   
+		   $("#portraitButton").click(function() { 
+				$(".ipad_l").hide();
+				$(".ipad_p").show();
+		   });		
+
+		   $("#landscapeButton").click(function() { 
+				$(".ipad_p").hide();
+				$(".ipad_l").show();
+		   });	
+		   
+		});
+		
+		</script>
+
+		<!-- Google Analytics -->
+		
+		<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-6382240-10']);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		</script>
+		
+		<!-- End of Javascript -->
+
+		<!-- Date: 2013-04-13 -->
+	</head>
+	
+	<body>
+		
+		<div class="logo"></div>
+		
+		<div class="wrap">   
+		
+			<p>Hello, my name is Grace Varga. I am a senior interaction designer at Huge Inc. Brooklyn.
+			I designed the User Experience for the HBO GO apps on Xbox, Samsung TV, and Roku as well as the HBO GO iPad Interactive Viewing Experience.</p>
+		        			
+			<!--
+<p><span id="twitter"><a target="blank" href="http://twitter.com/greyc">@greyc</a></span> is an interaction designer that <span id="tumblr"><a target="blank" href="http://greyc.tumblr.com/">blogs</a></span> from time to time, and occasionally posts <span id="vimeo"><a target="blank" href="http://vimeo.com/greyc">videos</a>. </span>
+			She has a full-time <span id="linkedin"><a target="blank" href="http://www.linkedin.com/in/greyc">job</a></span> on weekdays but manages to be a <span id="ha"><a target="blank" href="http://www.youtube.com/watch?v=ES32UFlPOUA">useless creature</a></span> on weekends. You can check out her <span id="resume"><a target="blank" href="http://verygreyc.com/downloads/graceSalemResume.pdf">résumé</a></span>.</p>
+			
+			<p>If you <span id="mail"><a href="mailto:grace@verygreyc.com">yell</a></span> at her, it might help.</p>		
+-->
+		</div> <!-- # wrap -->
+
+		<div class="module xbox">
+			<h1>Selected Work</h1>
+			<div id="xbox_outer">
+				<img src="images/tv.png"/>
+				<div class="container">
+					<div id="content-slider">
+				    	<div id="slider">
+				        	<div id="mask">
+				            <ul>
+				           	<li id="first" class="firstanimation">
+				            <a href="#">
+				         	   <img src="images/xbox1.jpg" alt="xboxHome">
+				            </a>
+				           	<div class="tooltip"><h1>HBO GO on Xbox 360</h1></div>
+				            </li>
+				
+				            <li id="second" class="secondanimation">
+				            <a href="#">
+				            	<img src="images/xbox2.jpg" alt="xboxDetail">
+				            </a>
+				            <div class="tooltip"><h1>HBO GO on Xbox 360</h1></div>
+				            </li>
+				            
+				            <li id="third" class="thirdanimation">
+				            <a href="#">
+				            	<img src="images/xbox3.jpg" alt="xboxVideo">
+				            </a>
+				            <div class="tooltip"><h1>HBO GO on Xbox 360</h1></div>
+				            </li>
+				                        
+				            <li id="fourth" class="fourthanimation">
+				            <a href="#">
+				            	<img src="images/samsung1.jpg" alt="Howling">
+				            </a>
+				            <div class="tooltip"><h1>HBO GO on Samsung Internet TV</h1></div>
+				            </li>
+				                        
+				            <li id="fifth" class="fifthanimation">
+				            <a href="#">
+				            	<img src="images/roku1.jpg" alt="Sunbathing">
+				            </a>
+				            <div class="tooltip"><h1>HBO GO on Roku Streaming Player</h1></div>
+				            </li>
+				            </ul>
+				            </div>
+				            <div class="progress-bar"></div>
+				        </div>
+				    </div>
+				</div>
+			</div> <!--End of Xbox Outer-->
+			<div class="moduleMeta">
+				<p>
+				<b>CLIENT:</b> HBO -
+				<b>PROJECT:</b> HBO GO STREAMING SERVICE -
+				<b>PLATFROMS:</b> ROKU, SAMSUNG TV, XBOX. -
+				<b>ROLE:</b> UX -
+				<b>COMPANY:</b> HUGE INC.
+				</p>
+			</div>
+		</div> <!--End of Module-->
+		
+		
+		<div class="module video">
+			<h1>HBO GO Cross Platform Experience</h1>
+			<div id="xboxVideoWrapper">
+				<video id="xboxVid" width="861px" loop="loop" controls="controls" poster="videos/xbox.jpg">
+					<source src="videos/xbox.mp4" type="video/mp4" />
+					<source src="videos/xbox.ogv" type="video/ogv" />
+					<source src="videos/xbox.webm" type="video/webm" />
+				  Your browser does not support the video tag.
+				</video>
+			</div>
+			<div id="xboxVideoMeta">
+				<p>
+					<b>CLIENT:</b> HBO <br>
+					<b>PROJECT:</b> HBO GO STREAMING SERVICE <br>
+					<b>PLATFROMS:</b> ROKU, SAMSUNG TV, XBOX. <br>
+					<b>ROLE:</b> UX <br>
+					<b>COMPANY:</b> HUGE INC. <br>
+				</p>
+			</div>
+		</div>
+
+				
+		<div class="module ipad_l">
+			<button id="portraitButton">portrait</button>			
+			<div id="ipad_outer_l">
+				<img src="images/ipad_landscape.png"/>
+					<div class="containerIpad_l">
+					<div id="content-sliderIpad_l">
+				    	<div id="sliderIpad_l">
+				        	<div id="maskIpad_l">
+				            <ul>
+				           	<li id="first" class="firstanimation">
+				            <a href="#">
+				         	   <img src="images/iPad_IVE_02.png" alt="iPad">
+				            </a>
+				            </li>
+				
+				            <li id="second" class="secondanimation">
+				            <a href="#">
+				         	   <img src="images/iPad_IVE_01.png" alt="iPad">
+				            </a>
+				            </li>
+				            
+				            <li id="third" class="thirdanimation">
+				            <a href="#">
+				         	   <img src="images/iPad_IVE_05.jpg" alt="iPad">
+				            </a>
+				            </li>
+				                        
+				            <li id="fourth" class="fourthanimation">
+				            <a href="#">
+				         	   <img src="images/iPad_IVE_06.jpg" alt="iPad">
+				            </a>
+				            </li>
+				                        
+				            <li id="fifth" class="fifthanimation">
+				            <a href="#">
+				         	   <img src="images/iPad_IVE_07.jpg" alt="iPad">
+				            </a>
+				            </li>
+				            </ul>
+				            </div>
+				            <div class="progress-bar"></div>
+				        </div>
+				    </div>
+				</div>
+			</div> <!--End of ipad Outer-->
+
+			</div>
+			<div class="moduleMeta">
+				<p>
+				<b>CLIENT:</b> HBO -
+				<b>PROJECT:</b> HBO GO INTERACTIVE FEATURES -
+				<b>PLATFROMS:</b> IPAD -
+				<b>ROLE:</b> UX -
+				<b>COMPANY:</b> HUGE INC.
+				</p>
+			</div>
+
+		</div>	<!--End of Module-->
+
+		<div class="module ipad_p">
+		<button id="landscapeButton">landscape</button>			
+			<div id="ipad_outer_p">
+				<img src="images/ipad_portrait.png"/>
+					<div class="containerIpad_p">
+					<div id="content-sliderIpad_p">
+				    	<div id="sliderIpad_p">
+				        	<div id="maskIpad_p">
+					            <ul>
+					           	<li id="first" class="firstanimation">
+					            <a href="#">
+					         	   <img src="images/iPad_IVE_08.jpg" alt="iPad">
+					            </a>
+					            </li>
+					
+					            <li id="second" class="secondanimation">
+					            <a href="#">
+					         	   <img src="images/iPad_IVE_08.jpg" alt="iPad">
+					            </a>
+					            </li>
+					            
+					            <li id="third" class="thirdanimation">
+					            <a href="#">
+					         	   <img src="images/iPad_IVE_08.jpg" alt="iPad">
+					            </a>
+					            </li>
+					                        
+					            <li id="fourth" class="fourthanimation">
+					            <a href="#">
+					         	   <img src="images/iPad_IVE_08.jpg" alt="iPad">
+					            </a>
+					            </li>
+					                        
+					            <li id="fifth" class="fifthanimation">
+					            <a href="#">
+					         	   <img src="images/iPad_IVE_08.jpg" alt="iPad">
+					            </a>
+					            </li>
+					            </ul>
+				            </div>
+				            <div class="progress-bar"></div>
+				        </div>
+				    </div>
+				</div>
+			</div> <!--End of ipad Outer-->
+		</div>
+		
+		<div class="module video">
+			<h1>iPad Interactive Viewing Experience</h1>
+			<div id="ipadVideoWrapper">
+				<video id="ipadVid" width="861px" loop="loop" controls="controls" poster="videos/ipad.jpg">
+					<source src="videos/ipad.mp4" type="video/mp4" />
+					<source src="videos/ipad.ogv" type="video/ogv" />
+					<source src="videos/ipad.webm" type="video/webm" />
+				  Your browser does not support the video tag.
+				</video>
+			</div>
+			<div id="ipadVideoMeta">
+				<p>
+					<b>CLIENT:</b> HBO <br>
+					<b>PROJECT:</b> HBO GO INTERACTIVE VIEWING EXPERIENCE <br>
+					<b>PLATFROMS:</b> iPad <br>
+					<b>ROLE:</b> UX <br>
+					<b>COMPANY:</b> HUGE INC. <br>
+				</p>
+			</div>
+		</div>
+		
+		<div class="module mac">
+			<div id="mac_outer">
+				<img src="images/mac_s.png"/>
+					<div class="containerMac">
+					<div id="content-sliderMac">
+				    	<div id="sliderMac">
+				        	<div id="maskMac">
+					            <ul>
+					           	<li id="first" class="firstanimation">
+					            <a href="#">
+					         	   <img src="images/cspire1.jpg" alt="iPad">
+					            </a>
+					            </li>
+					
+					            <li id="second" class="secondanimation">
+					            <a href="#">
+					         	   <img src="images/cspire2.jpg" alt="iPad">
+					            </a>
+					            </li>
+					            
+					            <li id="third" class="thirdanimation">
+					            <a href="#">
+					         	   <img src="images/cspire3.jpg" alt="iPad">
+					            </a>
+					            </li>
+					                        
+					            <li id="fourth" class="fourthanimation">
+					            <a href="#">
+					         	   <img src="images/cspire4.jpg" alt="iPad">
+					            </a>
+					            </li>
+					                        
+					            <li id="fifth" class="fifthanimation">
+					            <a href="#">
+					         	   <img src="images/cspire5.jpg" alt="iPad">
+					            </a>
+					            </li>
+					            </ul>
+				            </div>
+				            <div class="progress-bar"></div>
+				        </div>
+				    </div>
+				</div>
+			</div> <!--End of ipad Outer-->
+		</div>		
+		
+		<div class="wrap">   
+		        			
+			<p><span id="twitter"><a target="blank" href="http://twitter.com/greyc">@greyc</a></span> is an interaction designer that <span id="tumblr"><a target="blank" href="http://greyc.tumblr.com/">blogs</a></span> from time to time, and occasionally posts <span id="vimeo"><a target="blank" href="http://vimeo.com/greyc">videos</a>. </span>
+			She has a full-time <span id="linkedin"><a target="blank" href="http://www.linkedin.com/in/greyc">job</a></span> on weekdays but manages to be a <span id="ha"><a target="blank" href="http://www.youtube.com/watch?v=ES32UFlPOUA">useless creature</a></span> on weekends. You can check out her <span id="resume"><a target="blank" href="http://verygreyc.com/downloads/graceSalemResume.pdf">résumé</a></span>.</p>
+			
+			<p>If you <span id="mail"><a href="mailto:grace@verygreyc.com">yell</a></span> at her, it might help.</p>		
+		</div> <!-- # wrap -->
+
+		<footer>
+			<h1>The end is dark.</h1>
+			<div id="moreWork"></div>
+			<div id="tweet"></div>
+			<div id="myResume"></div>
+			<div id="email"></div>
+		</footer>
+		
+	</body>
+</html>

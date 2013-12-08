@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Grace Varga's Portfolio</title>
+		<meta name="author" content="Grace Salem Varga">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- CSS -->
+		<link rel = "stylesheet" href = "_css/default.css" />
+		<link rel = "stylesheet" media = "screen" href = "_css/common.css" />
+		<link rel="stylesheet" href="styles.css"/>   
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+		
+		<!-- JS -->
+		<script src = "_lib/jquery-1.4.min.js"></script>
+		<script src = "_lib/jquery.easing-1.3.js"></script>
+
+		<!-- iosSlider plugin -->
+		<script src = "_src/jquery.iosslider.js"></script>
+		
+		<script type="text/javascript">
+			
+			$(document).ready(function() {
+				
+				$('#iosSlider1').iosSlider({
+					snapToChildren: true,
+					desktopClickDrag: true,
+					keyboardControls: true,
+					/*navNextSelector: $('.next'),
+					navPrevSelector: $('.prev'),*/
+					navSlideSelector: $('.selectors .item'),
+					onSlideChange: slideChange1
+				});
+			
+				$('#iosSlider2').iosSlider({
+					snapToChildren: true,
+					desktopClickDrag: true,
+					keyboardControls: true,
+					navNextSelector: $('#next2'),
+					navPrevSelector: $('#prev2'),
+/* 					onSlideChange: slideChange2 */
+				});				
+				
+				$('#iosSlider3').iosSlider({
+					snapToChildren: true,
+					desktopClickDrag: true,
+					keyboardControls: true,
+					navNextSelector: $('#next3'),
+					navPrevSelector: $('#prev3'),
+/* 					onSlideChange: slideChange3 */
+				});	
+				
+				$('#iosSlider4').iosSlider({
+					snapToChildren: true,
+					desktopClickDrag: true,
+					keyboardControls: true,
+					navNextSelector: $('#next4'),
+					navPrevSelector: $('#prev4'),
+/* 					onSlideChange: slideChange3 */
+				});	
+						
+				$(".ipad_p").hide();
+				
+				$("#portraitButton").click(function() { 
+					$(".ipad_l").hide();
+					$(".ipad_p").show();
+				});		
+				
+				$("#landscapeButton").click(function() { 
+					$(".ipad_p").hide();
+					$(".ipad_l").show();
+				});	
+							
+			}); 
+			
+			function slideChange1(args) {
+				
+				$('#iosSlider1 .selectors .item').removeClass('selected');
+				$('#iosSlider1 .selectors .item:eq(' + (args.currentSlideNumber - 1) + ')').addClass('selected');
+				
+			}
+			
+		</script>
+		
+
+		<!-- Google Analytics -->
+		
+		<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-6382240-10']);
+		_gaq.push(['_trackPageview']);
+		
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		</script>
+		
+		<!-- End of Javascript -->
+
+		<!-- Date: 2013-04-13 -->
+	</head>
+	
+	<body>
+		
+		<div class="logo"></div>
+		
+		<div class="wrap1">   
+
+			<p><span id="twitter"><a target="blank" href="http://twitter.com/greyc">@greyc</a></span> is a senior interaction designer that <span id="tumblr"><a target="blank" href="http://greyc.tumblr.com/">blogs</a></span> from time to time, and occasionally posts <span id="vimeo"><a target="blank" href="http://vimeo.com/greyc">videos</a>. </span>
+			She has a full-time <span id="linkedin"><a target="blank" href="http://www.linkedin.com/in/greyc">job</a></span> during the week but manages to be a <span id="ha"><a target="blank" href="http://www.youtube.com/watch?v=ES32UFlPOUA">useless creature</a></span> on weekends.</p>
+					
+		</div> <!-- # wrap -->
+
+
+			<div class="module xbox">
+	
+			<div id="selectWork">
+				<div class="selectWorkModule"><h2>select work<br/><span>2010-2013</span></h2></div>
+			</div>
+		
+			<h1>HBO GO Cross Platform Experience</h1>
+			<div id="xbox_outer"> <!-- Xbox Outer -->
+			<img src="images/tv.png"/>
+
+				<div class = 'container'> <!-- carousel -->
+					
+					<div class = 'iosSlider' id = 'iosSlider1'>
+					
+						<div class = 'slider'>
+		
+							<div class = 'item'>
+								<img src="images/xbox1.jpg" />
+							</div>
+							<div class = 'item'>
+								<img src="images/xbox2.jpg" />
+							</div>
+							<div class = 'item'>
+								<img src="images/xbox3.jpg" />
+							</div>
+							<div class = 'item'>
+								<img src="images/xbox4.jpg" />
+							</div>
+							<div class = 'item'>
+								<img src="images/xbox5.jpg" />
+							</div>
+						
+						</div>
+						
+						<div class = 'selectorsBlock'>
+						
+							<div class = 'selectors'>
+								<div class = 'item first selected'></div>
+								<div class = 'item'></div>
+								<div class = 'item'></div>
+								<div class = 'item'></div>
+								<div class = 'item'></div>
+							</div>
+							
+						</div>
+		
+					</div>
+								
+				</div> <!-- end of carousel -->
+
+
+
+			</div> <!--End of Xbox Outer-->
+			
+<!--
+			<div class="moduleMeta">
+				<p>
+				<b>CLIENT:</b> HBO -
+				<b>PROJECT:</b> HBO GO STREAMING SERVICE -
+				<b>PLATFROMS:</b> ROKU, SAMSUNG TV, XBOX. -
+				<b>ROLE:</b> UX -
+				<b>COMPANY:</b> HUGE INC.
+				</p>
+			</div>
+-->
+		</div> 
+		
+		
+		<div class="module videoXbox">
+<!-- 			<h1>HBO GO Cross Platform Experience</h1> -->
+			<div id="xboxVideoWrapper">
+				<video id="xboxVid" width="861px" controls="controls" poster="videos/xbox.jpg">
+					<source src="videos/xbox.mp4" type="video/mp4" />
+					<source src="videos/xbox.ogv" type="video/ogv" />
+					<source src="videos/xbox.webm" type="video/webm" />
+				  Your browser does not support the video tag.
+				</video>
+			</div>
+			<div id="xboxVideoMeta">
+				<p>
+					<b>CLIENT:</b> HBO <br>
+					<b>PROJECT:</b> HBO GO STREAMING SERVICE <br>
+					<b>PLATFROMS:</b> ROKU, SAMSUNG TV, XBOX. <br>
+					<b>ROLE:</b> UX <br>
+					<b>COMPANY:</b> HUGE INC. <br>
+				</p>
+			</div>
+		</div>
+
+				
+		<div class="module ipad_l">
+			<h1>iPad Interactive Viewing Experience</h1>
+			<button id="portraitButton" type"button"><img src="images/rotate.svg"/></button>			
+			<div id="ipad_outer_l">
+				<img src="images/ipad_landscape.png"/>
+				
+				<div id="ipadCarouselWrapper_l">				
+					<div class = 'container'>
+						
+						<div class = 'iosSlider' id = 'iosSlider2'>					
+							<div class = 'slider'>			
+								<div class = 'item'>
+									<img src="images/iPad_IVE_01.png" />
+								</div>
+								<div class = 'item'>
+									<img src="images/iPad_IVE_02.png" />
+								</div>
+								<div class = 'item'>
+									<img src="images/iPad_IVE_05.jpg" />
+								</div>
+								<div class = 'item'>
+									<img src="images/iPad_IVE_06.jpg" />
+								</div>
+								<div class = 'item'>
+									<img src="images/iPad_IVE_07.jpg" />
+								</div>							
+							</div>	<!-- slider -->			
+						</div>	<!-- ios slider -->		
+						
+						<div class = 'prevContainer'>
+							<div class = 'prev' id = 'prev2' ><img src="images/prev.svg"/></div>
+						</div>
+						
+						<div class = 'nextContainer'>
+							<div class = 'next' id = 'next2'><img src="images/next.svg"/></div>
+						</div>
+					
+					</div> <!-- container -->					
+				</div> <!-- carousel wrapper -->	
+			</div> <!-- outer -->	
+		</div> <!-- module -->	
+
+		<div class="module ipad_p">
+		<h1>iPad Interactive Viewing Experience</h1>
+			<button id="landscapeButton" type"button"><img src="images/rotate.svg"/></button>			
+			<div id="ipad_outer_p">
+				<img src="images/ipad_portrait.png"/>
+				<div id="ipadCarouselWrapper_p"> <!-- carousel wrapper -->
+				
+					<div class = 'container'> <!-- carousel -->
+						
+						<div class = 'iosSlider' id = 'iosSlider3'>
+						
+							<div class = 'slider'>
+			
+								<div class = 'item'>
+									<img src="images/iPad_IVE_08.jpg" />
+								</div>
+								<div class = 'item'>
+									<img src="images/iPad_IVE_09.jpg" />
+								</div>
+								<div class = 'item'>
+									<img src="images/iPad_IVE_10.jpg" />
+								</div>
+								<div class = 'item'>
+									<img src="images/iPad_IVE_11.jpg" />
+								</div>
+								<div class = 'item'>
+									<img src="images/iPad_IVE_12.jpg" />
+								</div>
+								<div class = 'item'>
+									<img src="images/iPad_IVE_13.jpg" />
+								</div>
+								<div class = 'item'>
+									<img src="images/iPad_IVE_14.jpg" />
+								</div>
+							
+							</div>			
+						
+						</div>		
+						<div class = 'prevContainer'>
+							<div class = 'prev' id = 'prev3' ><img src="images/prev.svg"/></div>
+						</div>
+						
+						<div class = 'nextContainer'>
+							<div class = 'next' id = 'next3'><img src="images/next.svg"/></div>
+						</div>
+					
+					</div> <!-- end of carousel -->	
+					
+				</div> <!--End of carousel wrapper-->				
+			</div> 
+		</div>
+		
+		<div class="module videoIpad">
+			<div id="ipadVideoMeta">
+				<p>
+					<b>CLIENT:</b> HBO <br>
+					<b>PROJECT:</b> HBO GO INTERACTIVE VIEWING EXPERIENCE <br>
+					<b>PLATFROMS:</b> iPad <br>
+					<b>ROLE:</b> UX <br>
+					<b>COMPANY:</b> HUGE INC. <br>
+				</p>
+			</div>
+			<div id="ipadVideoWrapper">
+				<video id="ipadVid" width="861px" controls="controls" poster="videos/ipad.jpg">
+					<source src="videos/ipad.mp4" type="video/mp4" />
+					<source src="videos/ipad.ogv" type="video/ogv" />
+					<source src="videos/ipad.webm" type="video/webm" />
+				  Your browser does not support the video tag.
+				</video>
+			</div>
+		</div>
+		
+
+				
+		<div class="module mac">
+			<h1>C Spire Wireless</h1>
+				
+				<div id="macCarouselWrapper">				
+					<div class = 'container'>
+						
+						<div class = 'iosSlider' id = 'iosSlider4'>					
+							<div class = 'slider'>			
+								<div class = 'item'>
+									<img src="images/cspire1.jpg" />
+								</div>
+								<div class = 'item'>
+									<img src="images/cspire2.jpg" />
+								</div>
+								<div class = 'item'>
+									<img src="images/cspire3.jpg" />
+								</div>
+								<div class = 'item'>
+									<img src="images/cspire4.jpg" />
+								</div>
+								<div class = 'item'>
+									<img src="images/cspire5.jpg" />
+								</div>							
+								<div class = 'item'>
+									<img src="images/cspire6.jpg" />
+								</div>								
+							</div>	<!-- slider -->			
+						</div>	<!-- ios slider -->		
+						
+						<div class = 'prevContainer'>
+							<div class = 'prev' id = 'prev4' ><img src="images/prev.svg"/></div>
+						</div>
+						
+						<div class = 'nextContainer'>
+							<div class = 'next' id = 'next4'><img src="images/next.svg"/></div>
+						</div>
+					
+					</div> <!-- container -->					
+				</div> <!-- carousel wrapper -->	
+		</div> <!-- module -->	
+
+	
+		
+		<div class="wrap2">   
+		        			
+			<p>			
+			If you haven't had enough of her, <a target="blank" href="http://verygreyc.com/downloads/graceSalemResume.pdf">download her resume</a> or <a href="mailto:grace@verygreyc.com">send her a message</a>.<br/>
+			Also, you can always <a target="blank" href="http://very.verygreyc.com">look at more work</a> to see what else she can do.
+			</p>		
+			
+		</div>
+		
+<!--
+		<div id="contact">
+			<div class="contactModule" id="moreWork"> <h2><a target="blank" href="http://very.verygreyc.com">select work<br/><span>2004-2010</span></a></h2></div>
+			<div class="contactModule" id="myResume"><h2><a target="blank" href="http://verygreyc.com/downloads/graceSalemResume.pdf">download her résumé</a></h2></div>
+			<div class="contactModule" id="email"><h2><a href="mailto:grace@verygreyc.com">email her</a></h2></div>
+		</div>
+-->
+		
+		<footer>
+			<h1>The End<br/><span>is  dark</span></h1>
+		</footer>
+		
+	</body>
+</html>

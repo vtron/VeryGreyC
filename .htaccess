@@ -1,0 +1,4 @@
+AuthUserFile /home/greyc/verygreyc.com/test/.htpasswd
+AuthType Basic
+AuthName "My Files"
+require valid-user
