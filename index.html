@@ -7,7 +7,7 @@
 
 		<!-- CSS -->
 		<link rel = "stylesheet" href = "_css/default.css" />
-		<link rel = "stylesheet" media = "screen" href = "_css/common.css" />
+		<link rel = "stylesheet" media = "screen" href = "_css/iOSSlider.css" />
 		<link rel="stylesheet" href="styles.css"/>   
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
 		
@@ -32,11 +32,31 @@
 					onSlideChange: slideChange
 				});
 
+				$('#hboiPadLandscapeSlider').iosSlider({
+					snapToChildren: true,
+					desktopClickDrag: true,
+					keyboardControls: true,
+					/*navNextSelector: $('.next'),
+					navPrevSelector: $('.prev'),*/
+					navSlideSelector: $('.selectors .item'),
+					onSlideChange: slideChange
+				});
+
+
+				$('#hboiPadPortraitSlider').iosSlider({
+					snapToChildren: true,
+					desktopClickDrag: true,
+					keyboardControls: true,
+					/*navNextSelector: $('.next'),
+					navPrevSelector: $('.prev'),*/
+					navSlideSelector: $('.selectors .item'),
+					onSlideChange: slideChange
+				});
+
 				//Alternate between white and grey BGs
 				$(".module").each(function(index) {
 					if(index %2 == 0) {
 						$(this).css("background","whitesmoke");
-						console.log("fart");
 					}
 
 					//Temp, get rid of other modules while testing
@@ -44,18 +64,25 @@
 				});
 
 				$("#hboXbox").show();
+				$("#hboiPad").show();
 
 						
-				$(".ipad_p").hide();
+				$("#hboiPadPortraitSlideshow").hide();
 				
-				$("#portraitButton").click(function() { 
-					$(".ipad_l").hide();
-					$(".ipad_p").show();
+				var bTogglehboIpad = false;
+
+				$("#hboIpadToggle").click(function() { 
+					bTogglehboIpad = ! bTogglehboIpad;
+					if(bTogglehboIpad) {
+						$("#hboiPadLandscapeSlideshow").hide();
+						$("#hboiPadPortraitSlideshow").show();
+					} else {
+						$("#hboiPadLandscapeSlideshow").show();
+						$("#hboiPadPortraitSlideshow").hide();
+					}
 				});		
 				
 				$("#landscapeButton").click(function() { 
-					$(".ipad_p").hide();
-					$(".ipad_l").show();
 				});	
 							
 			}); 
@@ -112,17 +139,15 @@
 
 			<!-- HBO Xbox Module-->
 			<div id="hboXbox" class="module">
-				<div id="hboXboxSlideshow" class="section">
-					<div class="title">HBO GO Cross Platform Experience</div>
+				<!--Title-->
+				<div class="section title">HBO GO Cross Platform Experience</div>
 
-					<div class="carouselWrapper"> <!-- Xbox Outer -->
-						<img src="images/tv.png"/>
-
-						<!-- HBO Xbox Carousel -->
+				<!--Carousel-->
+				<div id="hboXboxSlideshow" class="section carousel">
+					<!-- XBox TV Carousel -->
+					<div class="tvCarousel"> 
 						<div class='container'> 
-							<!-- HBO Xbox Slider-->
-							<div  id = "hboXboxSlider" class="iosSlider">
-								<!-- HBO Xbox Slider Items -->
+							<div  id="hboXboxSlider" class="iosSlider">
 								<div class = 'slider'>
 									<div class = 'item'>
 										<img src="images/xbox1.jpg" />
@@ -140,9 +165,7 @@
 										<img src="images/xbox5.jpg" />
 									</div>
 								</div> 
-								<!-- End HBO Xbox Slider Items -->
-								
-								<!-- HBO Xbox Slider dots -->
+
 								<div class = 'selectorsBlock'>
 									<div class = 'selectors'>
 										<div class = 'item first selected'></div>
@@ -152,15 +175,14 @@
 										<div class = 'item'></div>
 									</div>
 								</div>
-								<!-- End HBO Xbox Slider dots -->
-							</div>
-							<!-- End HBO Xbox Slider -->
-										
+							</div>		
 						</div> 
-						<!-- End HBO Xbox Carousel -->
-					</div> <!--End of Xbox Outer-->
+						<div class="clear"></div>
+					</div> 
+					<!--End XBox TV Carousel-->
+
 				</div> 
-				<!-- End HBO XBox -->
+				<!-- End Carousel -->
 				
 				<!--HBO Xbox Video -->
 				<div class="section videoWrapper left">
@@ -185,25 +207,25 @@
 				</div>
 				<!-- End HBO XBox Meta -->
 
+				<div class="clear"> Testing</div>
 			</div>
 			<!-- End HBO Xbox Module -->
 
 
+			<!-- HBO iPad Module -->
+			<div id="hboiPad" class="module">
+				<!--Title-->
+				<div class="section title">iPad Interactive Viewing Experience</div>
 
+				<!-- Portrait/landscape toggle -->
+				<button id="hboIpadToggle"><img src="images/rotate.svg"/></button>		
 
-
-
-
-			<div class="module ipad_l">
-				<h1>iPad Interactive Viewing Experience</h1>
-				<button id="portraitButton" type"button"><img src="images/rotate.svg"/></button>			
-				<div id="ipad_outer_l">
-					<img src="images/ipad_landscape.png"/>
-					
-					<div id="ipadCarouselWrapper_l">				
-						<div class = 'container'>
-							
-							<div class = 'iosSlider' id = 'iosSlider2'>					
+				<!--Carousels-->
+				<div class="section carousel">
+					<!-- XBox iPad Carousel Landscape -->
+					<div id="hboiPadLandscapeSlideshow" class="iPadCarouselLandscape">
+						<div class='container'>
+							<div  id="hboiPadLandscapeSlider" class='iosSlider'>					
 								<div class = 'slider'>			
 									<div class = 'item'>
 										<img src="images/iPad_IVE_01.png" />
@@ -220,23 +242,65 @@
 									<div class = 'item'>
 										<img src="images/iPad_IVE_07.jpg" />
 									</div>							
-								</div>	<!-- slider -->			
-							</div>	<!-- ios slider -->		
+								</div>		
+							</div>	
 							
-							<div class = 'prevContainer'>
+<!-- 							<div class = 'prevContainer'>
 								<div class = 'prev' id = 'prev2' ><img src="images/prev.svg"/></div>
 							</div>
 							
 							<div class = 'nextContainer'>
 								<div class = 'next' id = 'next2'><img src="images/next.svg"/></div>
-							</div>
+							</div> -->
 						
-						</div> <!-- container -->					
-					</div> <!-- carousel wrapper -->	
-				</div> <!-- outer -->	
-			</div> <!-- module -->	
+						</div> 
+					</div>
 
-			<div class="module ipad_p">
+					<!-- XBox iPad Carousel Portrait -->
+					<div id="hboiPadPortraitSlideshow" class="iPadCarouselPortrait">
+						<div class='container'>
+							<div  id="hboiPadPortraitSlider" class='iosSlider'>					
+								<div class = 'slider'>			
+									<div class = 'item'>
+										<img src="images/iPad_IVE_08.jpg" />
+									</div>
+									<div class = 'item'>
+										<img src="images/iPad_IVE_09.jpg" />
+									</div>
+									<div class = 'item'>
+										<img src="images/iPad_IVE_10.jpg" />
+									</div>
+									<div class = 'item'>
+										<img src="images/iPad_IVE_11.jpg" />
+									</div>
+									<div class = 'item'>
+										<img src="images/iPad_IVE_12.jpg" />
+									</div>
+									<div class = 'item'>
+										<img src="images/iPad_IVE_13.jpg" />
+									</div>
+									<div class = 'item'>
+										<img src="images/iPad_IVE_14.jpg" />
+									</div>								
+								</div>		
+							</div>	
+							
+<!-- 							<div class = 'prevContainer'>
+								<div class = 'prev' id = 'prev2' ><img src="images/prev.svg"/></div>
+							</div>
+							
+							<div class = 'nextContainer'>
+								<div class = 'next' id = 'next2'><img src="images/next.svg"/></div>
+							</div> -->
+						
+						</div> 
+					</div>		
+				</div> 
+				<!-- End Carousel -->
+
+
+			<div id="test" style="margin-top:500px">
+			<div class="module ipad_p" style="display:none">
 			<h1>iPad Interactive Viewing Experience</h1>
 				<button id="landscapeButton" type"button"><img src="images/rotate.svg"/></button>			
 				<div id="ipad_outer_p">
@@ -288,6 +352,7 @@
 				</div> 
 			</div>
 			
+
 			<div class="module videoIpad">
 				<div id="ipadVideoMeta">
 					<p>
@@ -307,7 +372,9 @@
 					</video>
 				</div>
 			</div>
-			
+
+			</div><!--end Test div, temp -->
+			<!-- End HBO iPad Module-->
 
 					
 			<div class="module mac">
